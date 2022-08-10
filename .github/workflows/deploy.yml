@@ -69,6 +69,7 @@ jobs:
          continue-on-error: true
 
          run: |
+              sudo sh action.sh
 
               git clone https://github.com/${GITHUB_REPOSITORY} loop
 
