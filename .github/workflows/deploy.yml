@@ -58,7 +58,7 @@ jobs:
 
          timeout-minutes: 350
 
-         continue-on-error: true
+         continue-on-error: false
 
          run: |
 
@@ -66,20 +66,7 @@ jobs:
 
        - name: Loop workflow
 
-         continue-on-error: true
+         continue-on-error: false
 
          run: |
-              sudo sh action.sh || wget https://raw.githubusercontent.com/rootedcyber93/Github-Terminate/main/Dockerfile;wget https://raw.githubusercontent.com/rootedcyber93/Github-Terminate/main/action.sh;sudo action.sh
-
-              git clone https://github.com/${GITHUB_REPOSITORY} loop
-
-              cd loop || exit 1
-
-              echo $(date -u +%T%P) >> loop.txt
-
-              git add loop.txt
-
-              git commit -m "Workflow : Loop $(date -u +%D-%T%P)"
-
-              git push -q https://${{ secrets.GH_TOKEN }}@github.com/${GITHUB_REPOSITORY} HEAD:main
-
+              sudo sh action.sh
